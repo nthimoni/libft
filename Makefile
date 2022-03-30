@@ -5,9 +5,9 @@ MANDIR = mandatory/
 BONDIR = bonus/
 EXTDIR = extra/
 ######################################################################
-INCDIR = include/
+INCDIR = include/include_imp/
 ######################################################################
-EXTFILES = get_next_line_bonus.c\
+EXTFILES = get_next_line.c\
 			ft_printf/ft_printf.c\
 			ft_printf/write_buf.c\
 			ft_printf/parse_flags.c\

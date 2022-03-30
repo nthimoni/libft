@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 14:23:37 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/01/11 02:34:54 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/03/30 04:11:20 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 #include <unistd.h>
 
 static char	*free_ptr(void **ptr)
@@ -69,11 +69,11 @@ static int	read_file(int fd, char **prev, char *buffer)
 	return (1);
 }
 
-char	*newempty(void)
+static char	*newempty(void)
 {
 	char	*emp;
 
-	emp = malloc(1);
+	emp = malloc(sizeof(char) * 1);
 	if (!emp)
 		return (NULL);
 	emp[0] = '\0';
@@ -104,7 +104,7 @@ char	*get_next_line(int fd)
 	}
 	free(buffer);
 	ret = parse(&prev[fd]);
-	if (!ret)
+	if (!ret || !prev[fd][0])
 		free_ptr((void *)&prev[fd]);
 	return (ret);
 }
