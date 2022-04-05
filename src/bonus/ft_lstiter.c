@@ -6,13 +6,13 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 15:36:59 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/01/27 18:38:18 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/04/05 17:56:16 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(int))
+void	ft_lstiter(t_list *lst, void (*f)(t_content))
 {
 	while (lst)
 	{
