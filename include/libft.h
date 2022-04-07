@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 17:03:32 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/04/05 18:06:42 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/04/07 19:28:27 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 char		*get_next_line(int fd);
 int			ft_printf(const char *s, ...);
 long int	ft_atol(const char *str);
+int			ft_is_ws(char a);
 
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);

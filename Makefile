@@ -18,7 +18,8 @@ EXTFILES = get_next_line.c\
 			ft_printf/print_p.c\
 			ft_printf/print_xX.c\
 			ft_printf/print_percent.c\
-			ft_atol.c
+			ft_atol.c\
+			ft_is_ws.c
 
 MANFILES = ft_isalpha.c\
 			ft_isdigit.c\
@@ -72,7 +73,7 @@ EXTOBJ = $(addprefix $(OBJDIR), $(addprefix $(EXTDIR), $(EXTFILES:.c=.o)))
 AR = ar -rc
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-INCPATH = -I$(INCDIR)
+INCPATH = -I$(INCDIR) -Iinclude/
 ######################################################################
 NAME = libft.a
 
