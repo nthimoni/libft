@@ -71,7 +71,7 @@ MANOBJ = $(addprefix $(OBJDIR), $(addprefix $(MANDIR), $(MANFILES:.c=.o)))
 EXTOBJ = $(addprefix $(OBJDIR), $(addprefix $(EXTDIR), $(EXTFILES:.c=.o)))
 ######################################################################
 AR = ar -rc
-CC = gcc
+CC = gcc -g
 CFLAGS = -Wall -Wextra -Werror
 INCPATH = -I$(INCDIR) -Iinclude/
 ######################################################################
