@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 17:03:32 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/04/22 17:02:45 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/08/23 14:44:59 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include "../../include/parser.h"
 
 char		*get_next_line(int fd);
 int			ft_printf(const char *s, ...);
@@ -57,7 +56,7 @@ void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 
-typedef t_token	t_content;
+typedef void*	t_content;
 
 typedef struct s_list
 {
