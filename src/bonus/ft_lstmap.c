@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 15:44:08 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/04/05 17:57:12 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/08/23 14:57:51 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ static int	create_back(t_list *lst, t_content content)
 	return (1);
 }
 
-t_list	*ft_lstmap(t_list *lst, t_content (*f)(t_content), void (*del)(t_content))
+t_list	*ft_lstmap(t_list *lst, t_content (*f)(t_content),
+		void (*del)(t_content))
 {
 	t_list	*head;
 
